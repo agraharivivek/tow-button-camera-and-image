@@ -1,0 +1,24 @@
+﻿WhatsApp-style Camera Feature Package
+
+Included files:
+- components/tasks/CameraGalleryPicker.tsx
+- components/tasks/hooks/useCameraCapture.ts
+- components/tasks/hooks/useDeviceGallery.ts
+- components/tasks/QuestionRenderer.tsx
+- components/tasks/TaskRenderer.tsx
+- lib/native/camera.ts
+- app/(merchandiser)/merchandiser.scss
+
+Capacitor dependencies to install in your target project:
+npm i @capacitor-community/camera-preview @capacitor-community/media
+npx cap sync
+
+Android permissions (AndroidManifest.xml):
+- android.permission.CAMERA
+- android.permission.READ_MEDIA_IMAGES (Android 13+)
+- android.permission.READ_EXTERNAL_STORAGE (maxSdkVersion=32)
+
+iOS Info.plist keys:
+- NSCameraUsageDescription
+- NSPhotoLibraryUsageDescription
+- NSPhotoLibraryAddUsageDescription
